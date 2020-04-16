@@ -1,0 +1,23 @@
+zuul:
+  routes:
+    get:
+      path: /get/**
+      url: http://httpbin.org/get
+    links:
+      path: /links/**
+      url: http://httpbin.org/links
+    images:
+      path: /image/**
+      url: http://httpbin.org/image
+    posts:
+      path: /posts
+      url: http://jsonplaceholder.typicode.com/posts
+
+
+eureka:
+  client:
+    enabled: true
+
+feign:
+  hystrix:
+    enabled: true
